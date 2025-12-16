@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Book Haven</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-book"></i> Book Haven</h1>
+                    <p class="tagline">Мир книг у вас под рукой</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-book-open"></i> Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count" id="header-cart-count">0</span></a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск книг...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- О нас -->
+            <section class="about-section">
+                <h2 class="section-title">О нашем магазине</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/placeholder.jpg" alt="Наш магазин">
+                    </div>
+                    <div class="about-text">
+                        <p>Book Haven был основан в 2003 году группой энтузиастов, которые верили, что книга - это не просто товар, а источник знаний, вдохновения и удовольствия.</p>
+                        <p>Мы тщательно отбираем книги для нашего ассортимента, сотрудничаем с лучшими издательствами и постоянно расширяем каталог.</p>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Лет на рынке</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50 000+</h3>
+                        <p>Книг в ассортименте</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>25 000+</h3>
+                        <p>Довольных клиентов</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Издательств-партнеров</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- Блок с данными из API -->
+            <section class="api-section">
+                <h2 class="section-title">Текущая погода в Москве</h2>
+                <div class="api-content">
+                    <div class="api-description">
+                        <p>Мы заботимся о комфорте наших клиентов, поэтому предоставляем актуальную информацию о погоде. Эти данные обновляются в реальном времени с помощью внешнего API.</p>
+                    </div>
+                    <div class="api-data" id="api-data">
+                        <!-- Сюда будут загружены данные через API -->
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Загрузка данных о погоде...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Haven</h3>
+                    <p>Книжный магазин с душой.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Книжная, д. 15</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. Все права защищены.</p>
+                <p>Сайт создан в учебных целях</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

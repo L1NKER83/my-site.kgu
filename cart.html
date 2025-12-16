@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Book Haven</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-book"></i> Book Haven</h1>
+                    <p class="tagline">Мир книг у вас под рукой</p>
+                </div>
+                
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-book-open"></i> Каталог</a></li>
+                    <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count" id="header-cart-count">0</span></a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск книг...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Корзина покупок</h1>
+            
+            <div class="cart-content">
+                <!-- Содержимое корзины -->
+                <section class="cart-items-section">
+                    <div class="cart-header">
+                        <h2>Ваши товары</h2>
+                        <button class="clear-cart" id="clear-cart">
+                            <i class="fas fa-trash"></i> Очистить корзину
+                        </button>
+                    </div>
+                    
+                    <div class="cart-items" id="cart-items">
+                        <!-- Товары будут загружены через JavaScript -->
+                        <div class="empty-cart" id="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Ваша корзина пуста</h3>
+                            <p>Добавьте товары из каталога, чтобы сделать заказ</p>
+                            <a href="catalog.html" class="btn-primary">Перейти в каталог</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Итоговая информация -->
+                <aside class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Итого</h3>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Товары (<span id="items-count">0</span>)</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Доставка</span>
+                                <span id="shipping">$0.00</span>
+                            </div>
+                            <div class="summary-row discount-row">
+                                <span>Скидка</span>
+                                <span id="discount">-$0.00</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span>К оплате</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="coupon-section">
+                            <input type="text" id="coupon-code" placeholder="Введите промокод">
+                            <button id="apply-coupon">Применить</button>
+                        </div>
+                        
+                        <div class="shipping-options">
+                            <h4>Способ доставки</h4>
+                            <div class="shipping-option">
+                                <input type="radio" id="pickup" name="shipping" value="pickup" checked>
+                                <label for="pickup">
+                                    <span class="option-title">Самовывоз из магазина</span>
+                                    <span class="option-price">Бесплатно</span>
+                                </label>
+                            </div>
+                            <div class="shipping-option">
+                                <input type="radio" id="courier" name="shipping" value="courier">
+                                <label for="courier">
+                                    <span class="option-title">Курьерская доставка</span>
+                                    <span class="option-price">$5.99</span>
+                                </label>
+                            </div>
+                            <div class="shipping-option">
+                                <input type="radio" id="post" name="shipping" value="post">
+                                <label for="post">
+                                    <span class="option-title">Почтовая доставка</span>
+                                    <span class="option-price">$3.99</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="checkout-btn" id="checkout-btn">
+                            <i class="fas fa-lock"></i> Перейти к оформлению
+                        </button>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Безопасная оплата. Ваши данные защищены.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-promo">
+                        <h4>Акции и скидки</h4>
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="promo-text">
+                                <h5>Бесплатная доставка</h5>
+                                <p>При заказе от $30 доставка бесплатно</p>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="promo-text">
+                                <h5>Скидка 10%</h5>
+                                <p>При первом заказе используйте промокод: WELCOME10</p>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="promo-text">
+                                <h5>+1 книга в подарок</h5>
+                                <p>При покупке от 3 книг — дарим еще одну</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Рекомендуемые товары -->
+            <section class="recommended-section">
+                <h2 class="section-title">Рекомендуем также</h2>
+                <div class="recommended-products" id="recommended-products">
+                    <!-- Товары будут загружены через JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Haven</h3>
+                    <p>Книжный магазин с душой. Мы работаем с 2003 года, предоставляя нашим клиентам лучшие книги со всего мира.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Книжная, д. 15</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. Все права защищены.</p>
+                <p>Сайт создан в учебных целях</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

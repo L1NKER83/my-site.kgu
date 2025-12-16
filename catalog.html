@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог книг - Book Haven</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-book"></i> Book Haven</h1>
+                    <p class="tagline">Мир книг у вас под рукой</p>
+                </div>
+                
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-book-open"></i> Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count" id="header-cart-count">0</span></a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="catalog-search" placeholder="Поиск книг...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Каталог книг</h1>
+            
+            <div class="catalog-content">
+                <!-- Фильтры -->
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3 class="filter-title"><i class="fas fa-filter"></i> Фильтры</h3>
+                        <button class="clear-filters" id="clear-filters">Сбросить все</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Категории</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="fiction" checked>
+                                <span class="checkmark"></span>
+                                Художественная литература
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="fantasy">
+                                <span class="checkmark"></span>
+                                Фэнтези
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="detective">
+                                <span class="checkmark"></span>
+                                Детективы
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="science">
+                                <span class="checkmark"></span>
+                                Научная литература
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="biography">
+                                <span class="checkmark"></span>
+                                Биографии
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Цена, $</h4>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" id="min-price" placeholder="0" min="0" max="1000" value="0">
+                                <span>—</span>
+                                <input type="number" id="max-price" placeholder="100" min="0" max="1000" value="100">
+                            </div>
+                            <div class="price-slider">
+                                <input type="range" id="price-slider-min" min="0" max="100" value="0">
+                                <input type="range" id="price-slider-max" min="0" max="100" value="100">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Сортировка</h4>
+                        <select id="sort-by" class="sort-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="name-asc">Название: А-Я</option>
+                            <option value="name-desc">Название: Я-А</option>
+                            <option value="popular">Популярные</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Авторы</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="author" value="king">
+                                <span class="checkmark"></span>
+                                Стивен Кинг
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="author" value="rowling">
+                                <span class="checkmark"></span>
+                                Дж.К. Роулинг
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="author" value="tolkien">
+                                <span class="checkmark"></span>
+                                Дж.Р.Р. Толкин
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="author" value="martin">
+                                <span class="checkmark"></span>
+                                Джордж Мартин
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="author" value="dostoevsky">
+                                <span class="checkmark"></span>
+                                Ф.М. Достоевский
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Каталог товаров -->
+                <section class="catalog-main">
+                    <div class="catalog-header">
+                        <div class="catalog-stats">
+                            Найдено книг: <span id="books-count">0</span>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="catalog-grid" id="catalog-container">
+                        <!-- Книги будут загружены через JavaScript -->
+                    </div>
+                    
+                    <!-- Пагинация -->
+                    <div class="pagination" id="pagination">
+                        <button class="pagination-btn prev" disabled>
+                            <i class="fas fa-chevron-left"></i> Назад
+                        </button>
+                        <div class="pagination-numbers">
+                            <!-- Номера страниц будут добавлены через JavaScript -->
+                        </div>
+                        <button class="pagination-btn next">
+                            Вперед <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Haven</h3>
+                    <p>Книжный магазин с душой. Мы работаем с 2003 года, предоставляя нашим клиентам лучшие книги со всего мира.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Книжная, д. 15</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. Все права защищены.</p>
+                <p>Сайт создан в учебных целях</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

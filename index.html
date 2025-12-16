@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven - Книжный магазин</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-book"></i> Book Haven</h1>
+                    <p class="tagline">Мир книг у вас под рукой</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-book-open"></i> Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count" id="header-cart-count">0</span></a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск книг...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Слайдер -->
+            <section class="slider-section">
+                <h2 class="section-title">Новинки и бестселлеры</h2>
+                <div class="slider-container" id="book-slider">
+                    <div class="slider">
+                        <div class="slide active">
+                            <img src="assets/images/slider1.jpg" alt="Обложка книги 1">
+                            <div class="slide-caption">
+                                <h3>Новая книга Стивена Кинга</h3>
+                                <p>Триллер года уже в продаже</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/slider2.jpg" alt="Обложка книги 2">
+                            <div class="slide-caption">
+                                <h3>Фэнтези серия "Хроники Арраса"</h3>
+                                <p>Все книги в одном издании</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/slider3.jpg" alt="Обложка книги 3">
+                            <div class="slide-caption">
+                                <h3>Бизнес-литература</h3>
+                                <p>Секреты успеха от мировых лидеров</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/slider4.jpg" alt="Обложка книги 4">
+                            <div class="slide-caption">
+                                <h3>Детские книги</h3>
+                                <p>Развивающие книги для всех возрастов</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Кнопки управления слайдером -->
+                    <button class="slider-btn prev" id="prev-slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next" id="next-slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Индикаторы слайдов -->
+                    <div class="slider-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Каталог товаров -->
+            <section class="products-section">
+                <h2 class="section-title">Популярные книги</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/product1.jpg" alt="Обложка книги">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Мастер и Маргарита</h3>
+                            <p class="product-author">Михаил Булгаков</p>
+                            <p class="product-price">$19.99</p>
+                            <button class="product-btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/product2.jpg" alt="Обложка книги">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">1984</h3>
+                            <p class="product-author">Джордж Оруэлл</p>
+                            <p class="product-price">$16.50</p>
+                            <button class="product-btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/product3.jpg" alt="Обложка книги">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Убить пересмешника</h3>
+                            <p class="product-author">Харпер Ли</p>
+                            <p class="product-price">$18.75</p>
+                            <button class="product-btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/product4.jpg" alt="Обложка книги">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Великий Гэтсби</h3>
+                            <p class="product-author">Фрэнсис Скотт Фицджеральд</p>
+                            <p class="product-price">$15.25</p>
+                            <button class="product-btn">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Приветственный текст -->
+            <section class="welcome-section">
+                <h2 class="section-title">Добро пожаловать в Book Haven!</h2>
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <p>Наши преимущества:</p>
+                        <ul>
+                        
+                            <li>Бесплатная доставка при заказе от $30</li>
+                            <li>Программа лояльности с накопительными скидками</li>
+                            <li>Еженедельные акции и распродажи</li>
+                            <li>Клуб любителей книг с ежемесячными встречами</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="welcome-image">
+                        <img src="assets/images/placeholder.jpg" alt="Интерьер книжного магазина">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Haven</h3>
+                    <p>Книжный магазин с душой. Мы работаем с 2003 года, предоставляя нашим клиентам лучшие книги со всего мира.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Книжная, д. 15</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. Все права защищены.</p>
+                <p>Сайт создан в учебных целях</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файлов -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
